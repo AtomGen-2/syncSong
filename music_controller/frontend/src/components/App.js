@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
-import HomePage from "./HomePage"
+import HomePage1 from "./HomePage1"
 
 export default class App extends Component {
   constructor(props) {
@@ -9,11 +9,11 @@ export default class App extends Component {
 
   render() {
     return (<div>
-       <HomePage name="Vedant"/>
+       <HomePage1 name="Vedant"/>
     </div>
     )
   }
 }
 
 const appDiv = document.getElementById("app");
-render(<App name="Vedant"/>, appDiv);
+render(<App/>, appDiv);
