@@ -48,7 +48,7 @@ export default class CreateRoomPage extends Component {
     };
     fetch("/api/create-room", requestOptions)
       .then((response) => response.json())
-      .then((data) => console.log(data));
+      .then((data) => this.props.history.push("/room/"+data.code));
   }
 
   render() {
@@ -62,7 +62,7 @@ export default class CreateRoomPage extends Component {
         <Grid item xs={12} align="center">
           <FormControl component="fieldset">
             <FormHelperText>
-              <div align="center">Guest Control of Playback State</div>
+              <div align="center">Guest is controlling or not?</div>
             </FormHelperText>
             <RadioGroup
               row
